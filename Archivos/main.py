@@ -15,9 +15,11 @@ main_window = pygame.display.set_mode(window_size)
 pygame.display.set_caption("Project")
 running_game = True
 
-inv = []
+inv = []  #  Lista de Invaders
 pos_x = 100
 pos_y = 30
+
+#  Instanciacion de Invaders con sus respectivas coordenadas en x e y
 for i in range(5):
     pos_x = 100
     for j in range(10):

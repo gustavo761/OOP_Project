@@ -3,7 +3,7 @@ import Colors
 
 class Ship:
     """
-    Descripción del comportamiento de la nave
+    Descripción del comportamiento de la nave manipulada por el usuario
     """
 
     def __init__(self, x, y):
