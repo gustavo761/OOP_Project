@@ -4,13 +4,11 @@ from Invader import Invader
 from Ship import Ship
 import easygui as eg
 
+
 # Proyecto // Hacer un space invader
 
 pygame.init()
-window_width = 800
-window_height = 600
-window_size = (window_width, window_height)
-main_window = pygame.display.set_mode(window_size)
+main_window = pygame.display.set_mode((800, 600))
 
 pygame.display.set_caption("Project")
 running_game = True
@@ -18,6 +16,7 @@ running_game = True
 inv = []  #  Lista de Invaders
 pos_x = 100
 pos_y = 30
+
 
 #  Instanciacion de Invaders con sus respectivas coordenadas en x e y
 for i in range(5):
@@ -28,12 +27,17 @@ for i in range(5):
         pos_x += 50
     pos_y += 50
 
+
+#  Instanciación de la nave
 ship = Ship(400, 550)
-control_x = 4
+
+
+#  control_x y control_y definen la velocidad de movimiento de los invaders
+control_x = 1
 control_y = 0
 
 while running_game:
-    pygame.time.delay(100)
+    pygame.time.delay(10)
     main_window.fill(Colors.black) #  Refresca la pantalla
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -74,4 +78,5 @@ while running_game:
 
     ship.draw(main_window)
     pygame.display.update()
+    
 pygame.quit()

@@ -1,1 +1,0 @@
-ship.draw(main_window)
